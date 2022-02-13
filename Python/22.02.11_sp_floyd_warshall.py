@@ -18,7 +18,8 @@ for a in range(1, n+1):
 # 각 간선에 대한 정보 입력
 for _ in range(m):
     a, b, c = map(int, input().split())
-    graph[a][b] = c
+    graph[a][b] = c     # 유향 그래프 기준
+    # graph[b][a] = c   # 무향 그래프의 경우 이 코드 포함해야함
 
 # 플로이드 워셜 알고리즘 수행
 # 점화식 : D[a][b] = min(D[a][b], D[a][k] + D[k][b])
