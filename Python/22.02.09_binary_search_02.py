@@ -50,5 +50,5 @@ while start <= end:
     # 같거나 같을 경우이므로 코드 단축
     else:
         h = mid
-        start = mid + 1
+        start =  mid + 1
 print(h)
