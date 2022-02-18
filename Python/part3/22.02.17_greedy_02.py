@@ -7,8 +7,8 @@ s = input()
 result = 0
 for i in s:
     i = int(i)
-    if i == 0:
+    if i == 0:      # 0 이면 무시
         continue
-    else:
+    else:           # 수를 곱한 결과와 합한 값과 곱한 값 중 최댓값 선정
         result = max(result + i, result * i)
 print(result)
