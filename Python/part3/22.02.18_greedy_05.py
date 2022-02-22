@@ -4,6 +4,7 @@
 n, m = map(int, input().split())
 k = list(map(int, input().split()))
 
+# 수의 범위가 그리 크지 않
 result = 0
 for i in range(n):
     for j in range(i+1, n):
