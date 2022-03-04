@@ -1,12 +1,14 @@
 # 22.02.25 구현문제
 # 치킨 배달
 
-from turtle import distance
+# 틀림
+# 조합 라이브러리 몰라서 틀림
+from itertools import combinations
 
 
 def get_distance(house, chickens, distances):
     r1, c1 = house
-    distance = int(10e9)
+    distance = int(1e9)
     for chicken in chickens:
         r2, c2 = chicken
         distance = min(distance, abs(r1-r2) + abs(c1-c2))
