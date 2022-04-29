@@ -3,7 +3,7 @@
 
 import heapq
 import sys
-from turtle import distance
+
 input = sys.stdin.readline
 INF = int(1e9)
 
@@ -21,8 +21,9 @@ dist = [INF] * (n+1)
 # 모든 간선 정보 입력
 for _ in range(m):
     a, b, c = map(int,input().split())
-    graph[a].append((b,c))      # a 노드에서 b 노드로 가는 비용이 c
-    
+    graph[a].append((b, c))      # a 노드에서 b 노드로 가는 비용이 c
+
+
 def dijkstra(start):
     q = []
     # 시작 노드로 가기 위한 최단 경로는 0으로 설정하여 큐에 삽입
@@ -43,8 +44,7 @@ def dijkstra(start):
             if cost < dist[i[0]]:
                 dist[i[0]] = cost
                 heapq.heappush(q, (cost, i[0]))
-                
-# 다익스트라 알고리즘 수행
+
 # 다익스트라 알고리즘 수행
 dijkstra(start)
 

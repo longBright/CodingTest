@@ -30,5 +30,5 @@ for _ in range(T):
             dp[i][j] += max(left, left_up, left_down)
     result = 0
     for i in range(n):
-        result = max(result, dp[i][m-1])
+        result = max(result, dp[i][m-1])3
     print(result)
