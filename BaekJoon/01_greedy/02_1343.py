@@ -1,4 +1,4 @@
-# 1343번
+# 22.05.11 1343번
 # 폴리오미노
 # https://www.acmicpc.net/problem/1343
 
