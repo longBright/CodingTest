@@ -1,22 +1,19 @@
-# 22.05.25 2812번
+# 22.05.28 2812번
 # 크게 만들기
-# 다시
+# 접근부터 틀림
 
 n, k = map(int, input().split())
-string = input()
-
-sorted_s = []
+num = input()
+ans = []
+del_cnt = k
 for i in range(n):
-    sorted_s.append(int(string[i]))
-sorted_s.sort()
-print(sorted_s)
+    while len(ans) > 0 and del_cnt > 0:
+        if int(ans[-1]) < int(num[i]):
+            ans.pop()
+            del_cnt -= 1
+        else:
+            break
+    ans.append(num[i])
 
-cnt = 1
-result = ""
-for i in range(n):
-    if cnt == k:
-        break
-    if int(string[i]) <= sorted_s[k]:
-        string = string.replace(string[i], "")
-        cnt += 1
-print(string)
+ans = ''.join(ans)
+print(ans[:n-k])
