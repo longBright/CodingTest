@@ -17,15 +17,17 @@ public class greedy_02 {
         for (int i = 0; i < N; i++) {
             arr[i] = Integer.parseInt(st2.nextToken());
         }
-        Arrays.sort(arr);
-        int first = arr[N-1];
-        int second = arr[N-2];
+        Arrays.sort(arr);       // 배열 정렬
+        int first = arr[N-1];   // 첫번째로 큰 수
+        int second = arr[N-2];  // 두번째로 큰 수
         int answer = 0;
         while (M != 0) {
+            // 가장 큰 수를 최대한 많이 더함
             for (int i = 0; i < K; i++) {
                 answer += first;
                 M--;
             }
+            // 그 다음 큰 수를 한번 더함
             answer += second;
             M--;
         }
