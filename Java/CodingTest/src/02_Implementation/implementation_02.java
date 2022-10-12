@@ -8,12 +8,14 @@ public class implementation_02 {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int n = Integer.parseInt(br.readLine());
 
+        // 3이 포함된 문자열 탐색
         int count = 0;
         for (int h = 0; h <= n; h++) {
             for (int m = 0; m <= 59; m++) {
                 for (int s = 0; s <= 59; s++) {
                     String str = Integer.toString(h) + Integer.toString(m) + Integer.toString(s);
-                    if (str.contains("3")) count++;
+                    if (str.contains("3"))
+                        count++;
                 }
             }
         }

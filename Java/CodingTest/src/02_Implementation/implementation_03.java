@@ -6,12 +6,15 @@ import java.io.InputStreamReader;
 public class implementation_03 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        // 위치 입력
         String inputString = br.readLine();
+        // 변수 선언
         int row = inputString.charAt(1) - '0';
         int col = inputString.charAt(0) - 'a' + 1;
         int[][] types = { { -2, -1 }, { -2, 1 }, { 2, -1 }, { 2, 1 }, { -1, -2 }, { -1, 2 }, { 1, -2 }, { 1, 2 } };
         int cnt = 0;
 
+        // 이동 여부 확인
         int nrow, ncol;
         for (int[] type: types) {
             nrow = row + type[0];
